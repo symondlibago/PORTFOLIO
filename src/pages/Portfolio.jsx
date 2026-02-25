@@ -17,11 +17,11 @@ const Portfolio = () => {
       {/* Footer */}
       <footer className="py-8 text-center" style={{ backgroundColor: '#2B0D3E', color: '#C59DD9' }}>
         <div className="container mx-auto px-6">
-          <p className="text-sm md:text-base">
+          <p className="text-sm md:text-base font-mono">
             © {new Date().getFullYear()} Symond. All rights reserved.
           </p>
-          <p className="text-sm mt-2" style={{ color: '#F2EAF7', opacity: 0.7 }}>
-            Built with React, Tailwind CSS, and Framer Motion
+          <p className="text-sm mt-2 font-mono" style={{ color: '#F2EAF7', opacity: 0.7 }}>
+            Built with React and Tailwind CSS
           </p>
         </div>
       </footer>

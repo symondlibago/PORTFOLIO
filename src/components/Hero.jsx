@@ -1,12 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, ArrowRight } from 'lucide-react';
+import { Download, ArrowRight, Mail } from 'lucide-react'; // Added Mail icon
 import { Button } from './ui/button';
 import profilePic from '../assets/pic.jpg'; 
 
 const Hero = () => {
   const name = "SYMOND";
   
+  // Function to handle smooth scrolling
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const letterVariants = {
     hidden: { 
       color: "rgba(0,0,0,0)", 
@@ -33,7 +41,7 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center relative z-10">
         
-        {/* LEFT: Rephrased Bio & Name */}
+        {/* LEFT: Bio & Name */}
         <div className="lg:col-span-7">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -60,27 +68,34 @@ const Hero = () => {
               </span>
             </h1>
 
-            {/* Added font-sans here for the bio */}
             <p className="font-mono text-[#F2EAF7] opacity-70 text-lg md:text-xl max-w-lg mb-10 leading-relaxed font-light italic">
               I build high-performance web applications that look as good as they run. I focus on turning complex technical requirements into simple, functional tools.
             </p>
             
-            <div className="flex gap-6 items-center font-mono font-medium">
-              <Button className="bg-[#C59DD9] text-[#1a0b2e] hover:bg-[#F2EAF7] rounded-none px-8 py-7 transition-all flex items-center gap-2 group border-none font-bold cursor-pointer">
+            <div className="flex flex-wrap gap-4 items-center font-mono font-medium">
+              {/* VIEW PROJECTS Button with Scroll */}
+              <Button 
+                onClick={() => scrollToSection('projects')}
+                className="bg-[#C59DD9] text-[#1a0b2e] hover:bg-[#F2EAF7] rounded-full px-8 py-7 transition-all flex items-center gap-2 group border-none font-bold cursor-pointer"
+              >
                 VIEW PROJECTS <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <button className="text-[#C59DD9] border-b border-[#C59DD9] pb-1 hover:text-[#F2EAF7] hover:border-[#F2EAF7] transition-all flex items-center gap-2 bg-transparent cursor-pointer">
-                Download CV <Download className="w-4 h-4" />
-              </button>
+
+              {/* NEW: CONTACT ME Button */}
+              <Button 
+                onClick={() => scrollToSection('contact')}
+                variant="outline"
+                className="border-2 border-[#C59DD9] text-[#C59DD9] hover:bg-[#C59DD9] hover:text-[#1a0b2e] rounded-full px-8 py-7 transition-all flex items-center gap-2 font-bold cursor-pointer bg-transparent"
+              >
+                CONTACT ME <Mail className="w-4 h-4" />
+              </Button>
             </div>
           </motion.div>
         </div>
 
-        {/* RIGHT: Photo with drips on the border */}
+        {/* RIGHT: Photo */}
         <div className="lg:col-span-5 relative flex justify-center items-center">
           <div className="relative w-[300px] h-[400px] md:w-[400px] md:h-[500px]">
-            
-            {/* Drips positioned on the outside boundary */}
             {[...Array(4)].map((_, i) => (
               <motion.div
                 key={i}
