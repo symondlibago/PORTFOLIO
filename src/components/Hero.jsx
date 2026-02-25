@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Mail } from 'lucide-react'; 
 import { Button } from './ui/button';
-import profilePic from '../assets/pic.jpg'; 
+import profilePic from '../assets/pics.png'; 
 
 const Hero = () => {
   const name = "SYMOND";
@@ -122,7 +122,7 @@ const Hero = () => {
               <img 
                 src={profilePic} 
                 alt="Symond" 
-                className="w-full h-full object-cover grayscale brightness-90 hover:grayscale-0 transition-all duration-700 scale-105" 
+                className="w-full h-full object-cover grayscale brightness-90 hover:grayscale-0 transition-all duration-700 scale-[1] -translate-y-0.5"
               />
             </motion.div>
             <div className="absolute -inset-10 bg-[#C59DD9]/5 blur-[100px] rounded-full" />
