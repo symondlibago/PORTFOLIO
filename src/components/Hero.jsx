@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Download, ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
-// Image imported from your assets folder as requested
 import profilePic from '../assets/pic.jpg'; 
 
 const Hero = () => {
@@ -42,7 +41,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
           >
           
-            <h1 className="text-7xl md:text-9xl font-black leading-[0.85] mb-8">
+            <h1 className="font-display text-7xl md:text-9xl font-black leading-[0.85] mb-8">
               <div className="flex overflow-hidden">
                 {name.split("").map((letter, index) => (
                   <motion.span
@@ -56,17 +55,18 @@ const Hero = () => {
                   </motion.span>
                 ))}
               </div>
-              <span className="text-5xl md:text-7xl text-transparent block mt-2" style={{ WebkitTextStroke: '1px #C59DD9' }}>
-                DESIGNER
+              <span className="font-display text-5xl md:text-6xl text-transparent block mt-2" style={{ WebkitTextStroke: '1px #C59DD9' }}>
+                WEB DEVELOPER
               </span>
             </h1>
 
-            <p className="text-[#F2EAF7] opacity-70 text-lg md:text-xl max-w-lg mb-10 leading-relaxed font-light italic">
-              "I build high-performance web applications that look as good as they run. I focus on turning complex technical requirements into simple, functional tools."
+            {/* Added font-sans here for the bio */}
+            <p className="font-mono text-[#F2EAF7] opacity-70 text-lg md:text-xl max-w-lg mb-10 leading-relaxed font-light italic">
+              I build high-performance web applications that look as good as they run. I focus on turning complex technical requirements into simple, functional tools.
             </p>
             
-            <div className="flex gap-6 items-center">
-              <Button className="bg-[#C59DD9] text-[#1a0b2e] hover:bg-[#F2EAF7] rounded-none px-8 py-7 transition-all flex items-center gap-2 group border-none">
+            <div className="flex gap-6 items-center font-mono font-medium">
+              <Button className="bg-[#C59DD9] text-[#1a0b2e] hover:bg-[#F2EAF7] rounded-none px-8 py-7 transition-all flex items-center gap-2 group border-none font-bold cursor-pointer">
                 VIEW PROJECTS <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
               <button className="text-[#C59DD9] border-b border-[#C59DD9] pb-1 hover:text-[#F2EAF7] hover:border-[#F2EAF7] transition-all flex items-center gap-2 bg-transparent cursor-pointer">

@@ -1,18 +1,15 @@
 import { Code, Palette, Database, Globe, ShoppingCart, MessageSquare } from 'lucide-react';
 
 export const skills = [
-  { name: 'React JS', level: 90, icon: 'Code' },
   { name: 'HTML', level: 95, icon: 'Code' },
   { name: 'CSS', level: 95, icon: 'Palette' },
-  { name: 'PHP', level: 85, icon: 'Code' },
-  { name: 'Laravel', level: 85, icon: 'Code' },
   { name: 'JavaScript', level: 90, icon: 'Code' },
+  { name: 'PHP', level: 85, icon: 'Code' },
+  { name: 'React JS', level: 90, icon: 'Code' },
+  { name: 'Laravel', level: 85, icon: 'Code' },
   { name: 'Tailwind CSS', level: 90, icon: 'Palette' },
   { name: 'MySQL', level: 80, icon: 'Database' },
   { name: 'Git', level: 85, icon: 'Code' },
-  { name: 'REST APIs', level: 80, icon: 'Globe' },
-  { name: 'Node.js', level: 75, icon: 'Code' },
-  { name: 'Responsive Design', level: 95, icon: 'Globe' }
 ];
 
 export const projects = [
@@ -104,10 +101,10 @@ export const projects = [
     image: '/src/assets/computer/comcover.png', // Cover image
     techStack: ['React', 'Tailwind CSS', 'Laravel','MySQL'],
     gallery: [
-      '/src/assets/computer/comcover.png', '/src/assets/computer/comp1.png', '/src/assets/computer/com2.png',
-      '/src/assets/computer/com3.png', '/src/assets/computer/com4.png', '/src/assets/computer/com5.png',
-      '/src/assets/computer/com6.png', '/src/assets/computer/com7.png', '/src/assets/computer/com8.png',
-      '/src/assets/computer/com9.png', '/src/assets/computer/com10.png', '/src/assets/computer/com11.png',
+      '/src/assets/computer/comcover.png', '/src/assets/computer/comp1.png', '/src/assets/computer/comp2.png',
+      '/src/assets/computer/comp3.png', '/src/assets/computer/comp4.png', '/src/assets/computer/comp5.png',
+      '/src/assets/computer/comp6.png', '/src/assets/computer/comp7.png', '/src/assets/computer/comp8.png',
+      '/src/assets/computer/comp9.png', '/src/assets/computer/comp10.png', '/src/assets/computer/comp11.png',
       '/src/assets/computer/com12.png', '/src/assets/computer/com13.png', '/src/assets/computer/com14.png',
       '/src/assets/computer/com15.jpg',
     ], // Screenshots from your assets folder

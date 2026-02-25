@@ -37,14 +37,13 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-16 bg-white min-h-screen font-sans">
+    <section id="projects" className="py-16 bg-white min-h-screen font-mono">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#2B0D3E] mb-3">Featured Projects</h2>
-          <p className="text-base text-[#7A3F91]">A showcase of my recent work and creative solutions</p>
+          <h2 className="text-3xl md:text-4xl font-mono font-bold text-[#2B0D3E] mb-3">Featured Projects</h2>
+          <p className="text-base text-[#7A3F91] font-mono">A showcase of my recent work and creative solutions</p>
         </div>
 
-        {/* LayoutGroup ensures that elements within different cards coordinate their layout animations */}
         <LayoutGroup>
           <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project) => {
@@ -105,7 +104,7 @@ const Projects = () => {
                         <div className="absolute inset-0 bg-[#2B0D3E]/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                           <Button 
                             onClick={() => handleExpand(project.id)}
-                            className="rounded-full bg-[#7A3F91] text-white cursor-pointer text-sm"
+                            className="rounded-full bg-[#7A3F91] text-white cursor-pointer text-sm font-mono"
                           >
                             <ExternalLink className="h-4 w-4 mr-2" /> View Details
                           </Button>
@@ -116,7 +115,8 @@ const Projects = () => {
                     {/* Details Section */}
                     <div className={`p-6 flex flex-col ${isExpanded ? 'lg:w-2/5' : 'w-full flex-grow'}`}>
                       <div className="flex justify-between items-start mb-3">
-                        <motion.h3 layout="position" className={`${isExpanded ? 'text-2xl' : 'text-lg'} font-bold text-[#2B0D3E]`}>
+                        {/* Typography: Space Grotesk (font-display) */}
+                        <motion.h3 layout="position" className={`${isExpanded ? 'text-2xl' : 'text-lg'} font-mono font-bold text-[#2B0D3E]`}>
                           {project.title}
                         </motion.h3>
                         {isExpanded && (
@@ -126,7 +126,8 @@ const Projects = () => {
                         )}
                       </div>
                       
-                      <motion.div layout="position" className="text-[#7A3F91] mb-5 leading-relaxed text-sm">
+                      {/* Typography: Inter (font-sans) | Alignment: text-justify */}
+                      <motion.div layout="position" className="text-[#7A3F91] mb-5 leading-relaxed text-sm font-mono text-justify">
                         {!isExpanded ? (
                           <>
                             {project.description.length > 100 
@@ -148,7 +149,7 @@ const Projects = () => {
 
                       <motion.div layout="position" className="flex flex-wrap gap-2 mb-6 mt-auto">
                         {project.techStack.map((tech, idx) => (
-                          <div key={idx} className="flex items-center gap-1.5 text-[11px] font-medium p-1.5 rounded-md bg-[#2B0D3E] text-[#C59DD9]">
+                          <div key={idx} className="flex items-center gap-1.5 text-[11px] font-mono font-medium p-1.5 rounded-md bg-[#2B0D3E] text-[#C59DD9]">
                             {iconMap[tech]}
                             {tech}
                           </div>
@@ -163,7 +164,7 @@ const Projects = () => {
                           className="flex gap-4"
                         >
                           <Button 
-                            className="bg-[#7A3F91] text-white px-6 cursor-pointer text-sm"
+                            className="bg-[#7A3F91] text-white px-6 cursor-pointer text-sm font-mono"
                             onClick={() => window.open(project.link, '_blank', 'noopener,noreferrer')}
                           >
                             Visit Site
@@ -183,7 +184,8 @@ const Projects = () => {
                         transition={{ duration: 0.4, ease: "easeInOut" }}
                         className="p-6 border-t border-[#C59DD9]/20 bg-white"
                       >
-                        <h4 className="text-lg font-bold text-[#2B0D3E] mb-4">Project Screenshots</h4>
+                        {/* Typography: Space Grotesk (font-display) */}
+                        <h4 className="text-lg font-mono font-bold text-[#2B0D3E] mb-4">Project Screenshots</h4>
                         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
                           {project.gallery.map((src, i) => (
                             <motion.img
