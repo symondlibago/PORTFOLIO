@@ -1,13 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, ArrowRight, Mail } from 'lucide-react'; // Added Mail icon
+import { ArrowRight, Mail } from 'lucide-react'; 
 import { Button } from './ui/button';
 import profilePic from '../assets/pic.jpg'; 
 
 const Hero = () => {
   const name = "SYMOND";
   
-  // Function to handle smooth scrolling
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -39,7 +38,8 @@ const Hero = () => {
       <div className="absolute inset-0 opacity-30" 
            style={{ background: 'radial-gradient(circle at 50% 50%, #2b0d3e 0%, #0f051d 100%)' }} />
 
-      <div className="container mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center relative z-10">
+      {/* Added py-20 for mobile spacing and py-0 for desktop */}
+      <div className="container mx-auto px-6 py-20 lg:py-0 grid lg:grid-cols-12 gap-12 items-center relative z-10">
         
         {/* LEFT: Bio & Name */}
         <div className="lg:col-span-7">
@@ -49,8 +49,9 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
           >
           
-            <h1 className="font-display text-7xl md:text-9xl font-black leading-[0.85] mb-8">
-              <div className="flex overflow-hidden">
+            {/* Adjusted leading-tight for mobile and leading-[0.85] for desktop */}
+            <h1 className="font-display text-6xl md:text-9xl font-black leading-tight lg:leading-[0.85] mb-8">
+              <div className="flex flex-wrap overflow-hidden">
                 {name.split("").map((letter, index) => (
                   <motion.span
                     key={index}
@@ -63,7 +64,8 @@ const Hero = () => {
                   </motion.span>
                 ))}
               </div>
-              <span className="font-display text-5xl md:text-6xl text-transparent block mt-2" style={{ WebkitTextStroke: '1px #C59DD9' }}>
+              {/* Added mt-4 for mobile spacing between name and title */}
+              <span className="font-display text-4xl md:text-6xl text-transparent block mt-4 md:mt-2" style={{ WebkitTextStroke: '1px #C59DD9' }}>
                 WEB DEVELOPER
               </span>
             </h1>
@@ -73,7 +75,6 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-wrap gap-4 items-center font-mono font-medium">
-              {/* VIEW PROJECTS Button with Scroll */}
               <Button 
                 onClick={() => scrollToSection('projects')}
                 className="bg-[#C59DD9] text-[#1a0b2e] hover:bg-[#F2EAF7] rounded-full px-8 py-7 transition-all flex items-center gap-2 group border-none font-bold cursor-pointer"
@@ -81,7 +82,6 @@ const Hero = () => {
                 VIEW PROJECTS <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
 
-              {/* NEW: CONTACT ME Button */}
               <Button 
                 onClick={() => scrollToSection('contact')}
                 variant="outline"
@@ -95,7 +95,7 @@ const Hero = () => {
 
         {/* RIGHT: Photo */}
         <div className="lg:col-span-5 relative flex justify-center items-center">
-          <div className="relative w-[300px] h-[400px] md:w-[400px] md:h-[500px]">
+          <div className="relative w-[280px] h-[380px] md:w-[400px] md:h-[500px]">
             {[...Array(4)].map((_, i) => (
               <motion.div
                 key={i}

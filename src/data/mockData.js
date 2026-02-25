@@ -31,7 +31,7 @@ export const projects = [
   {
     id: 'tupad',
     title: 'Tupad - DOLE',
-    description: 'A web-based monitoring system developed to support the implementation of the TUPAD (Tulong Panghanapbuhay sa Ating Disadvantaged/Displaced Workers) emergency employment program...',
+    description: 'A web-based monitoring system developed to support the implementation of the TUPAD (Tulong Panghanapbuhay sa Ating Disadvantaged/Displaced Workers) emergency employment program. The system streamlines the management of beneficiary records, work assignments, attendance tracking, and payroll monitoring. It provides real-time data tracking, organized reporting, and improved transparency in monitoring work program progress. The platform was designed to enhance efficiency, reduce manual documentation, and support accurate record-keeping for program coordinators.',
     image: '/tupad/tupacover.png',
     techStack: ['React', 'CSS', 'MUI', 'Laravel','MySQL'],
     gallery: [
@@ -45,7 +45,7 @@ export const projects = [
   {
     id: 'gip',
     title: 'GIP - DOLE',
-    description: 'A digital monitoring system designed to manage and track interns under the Government Internship Program (GIP)...',
+    description: 'A digital monitoring system designed to manage and track interns under the Government Internship Program (GIP). The system handles intern profiling,stipend monitoring, and report generation. It streamlines administrative processes, improves data accuracy, and enhances transparency in monitoring intern performance and program implementation.',
     image: '/gip/gipcover.png',
     techStack: ['React', 'CSS', 'MUI', 'Laravel','MySQL'],
     gallery: [
@@ -59,7 +59,7 @@ export const projects = [
   {
     id: 'benoya',
     title: 'BA Monitoring System',
-    description: 'A comprehensive web-based Business Administration (BA) Monitoring System designed to centralize and manage operational workflows within the organization.',
+    description: 'A comprehensive web-based Business Administration (BA) Monitoring System designed to centralize and manage operational workflows within the organization. The system integrates multiple monitoring modules into one unified platform to improve efficiency, accountability, and real-time data visibility.',
     image: '/benoya/bacover.png',
     techStack: ['React', 'Tailwind CSS', 'Laravel','MySQL'],
     gallery: [
@@ -79,7 +79,7 @@ export const projects = [
   {
     id: 'pageantry',
     title: 'Pageantry Tabulation System',
-    description: 'A web-based Pageantry Tabulation System developed to digitize and automate the scoring process for beauty pageants...',
+    description: 'A web-based Pageantry Tabulation System developed to digitize and automate the scoring process for beauty pageants and competitions, featuring a centralized admin dashboard for managing candidates, judges, scoring criteria, and real-time result computation. Judges are provided with secure individual accounts to submit scores digitally during live events, while the system automatically calculates totals, rankings, and category awards to minimize human error and ensure accurate, transparent results. The platform was successfully deployed and used in Mr. & Ms. Panagbanga 2025 and Mr. & Ms. Vineyard 2026, significantly improving efficiency, reducing computation errors, and delivering faster result generation compared to manual tabulation methods.',
     image: '/tabulation/tabcover.png',
     techStack: ['React', 'Tailwind CSS', 'Laravel','MySQL'],
     gallery: [
@@ -96,7 +96,7 @@ export const projects = [
   {
     id: 'computer',
     title: 'Computer Tracking System',
-    description: 'A web-based Computer Tracking System developed for the library to monitor computer laboratory availability...',
+    description: 'A web-based Computer Tracking System developed for the library to monitor computer laboratory availability and manage student access efficiently. The system allows students to view real-time computer occupancy status and determine whether the laboratory is full or available. If all units are occupied, students can join a digital queue, and the system automatically notifies them when a computer becomes available. By replacing manual monitoring and physical waiting lines, the platform improves fairness, reduces congestion, and enhances the overall student experience while ensuring efficient computer usage management.',
     image: '/computer/comcover.png',
     techStack: ['React', 'Tailwind CSS', 'Laravel','MySQL'],
     gallery: [
@@ -113,7 +113,7 @@ export const projects = [
   {
     id: 'school',
     title: 'School Management System',
-    description: 'A web-based School Management System designed to streamline academic and administrative processes...',
+    description: 'A web-based School Management System designed to streamline academic and administrative processes through a role-based platform with three user types: Admin, Instructor, and Student. The system provides separate dashboards and functionalities for each role, allowing administrators to manage users, courses, and academic records; instructors to handle class management, grading, and student performance tracking; and students to view enrolled subjects, grades, and academic information. By centralizing academic operations into a single platform, the system improves efficiency, data accuracy, and communication between administrators, faculty, and students.',
     image: '/sm/smcover.png',
     techStack: ['React', 'Tailwind CSS', 'Laravel','MySQL'],
     gallery: [
@@ -133,7 +133,7 @@ export const projects = [
   {
     id: 'matria',
     title: 'Matria Marine Services',
-    description: 'A primarily frontend-focused web system developed for Matria Marine Services...',
+    description: 'A primarily frontend-focused web system developed for Matria Marine Services (www.matriamarine.com) to present company information and support basic administrative content management. The platform provides a clean and responsive user interface designed to showcase services, operations, and organizational information. The system includes a simple backend functionality that allows administrators to upload and manage images for content updates. Built to deliver an intuitive user experience, the project emphasizes layout design, responsiveness, and interface presentation rather than complex server-side processing.',
     image: '/matria/matriacov.png',
     link: 'https://www.matriamarine.com',
     techStack: ['React', 'Tailwind CSS', 'Laravel','MySQL','S3 Bucket'],
@@ -147,7 +147,7 @@ export const projects = [
   {
     id: 'payroll',
     title: 'Payroll System',
-    description: 'A web-based Payroll and Employee Management System designed to streamline salary computation...',
+    description: 'A web-based Payroll and Employee Management System designed to streamline salary computation and workforce administration. The system manages employee records, job roles, and compensation details while automating payroll calculations based on configured rates and work data. It provides structured employee profiling, payroll tracking, and organized record management to ensure accurate salary processing and reduced administrative workload. By digitizing payroll operations, the platform improves efficiency, minimizes computation errors, and enhances transparency in employee compensation management.',
     image: '/payroll/payrollcov.png',
     techStack: ['React', 'Tailwind CSS', 'Laravel','MySQL'],
     gallery: [
