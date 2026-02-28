@@ -37,11 +37,13 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-16 bg-white min-h-screen font-mono">
+    <section id="projects" className="py-16 bg-[#0A0A0A] min-h-screen font-mono">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-mono font-bold text-[#2B0D3E] mb-3">Featured Projects</h2>
-          <p className="text-base text-[#7A3F91] font-mono">A showcase of my recent work and creative solutions</p>
+          <h2 className="text-3xl md:text-4xl font-mono font-black text-white mb-3 uppercase tracking-tight">
+            Featured <span style={{ color: '#A855F7' }}>Projects</span>
+          </h2>
+          <p className="text-base text-white/50 font-mono font-bold tracking-widest uppercase">Creative Solutions & Code</p>
         </div>
 
         <LayoutGroup>
@@ -61,13 +63,13 @@ const Projects = () => {
                     layout: { type: "spring", stiffness: 200, damping: 25 },
                     opacity: { duration: 0.4 }
                   }}
-                  className={`relative rounded-2xl overflow-hidden shadow-md bg-[#F2EAF7] flex flex-col ${
+                  className={`relative rounded-2xl overflow-hidden shadow-2xl bg-[#161616] border border-white/5 flex flex-col ${
                     isExpanded ? 'lg:col-span-3 md:col-span-2' : 'h-full'
                   }`}
                 >
                   <div className={`flex flex-col h-full ${isExpanded ? 'lg:flex-row' : ''}`}>
                     {/* Image Section */}
-                    <motion.div layout className={`relative group overflow-hidden bg-[#1a0b2e] ${isExpanded ? 'lg:w-3/5' : 'w-full'}`}>
+                    <motion.div layout className={`relative group overflow-hidden bg-black ${isExpanded ? 'lg:w-3/5' : 'w-full'}`}>
                       <AnimatePresence mode="wait">
                         <motion.img
                           key={isExpanded ? currentImgIndex : 'cover'}
@@ -78,7 +80,7 @@ const Projects = () => {
                           src={isExpanded ? displayImages[currentImgIndex] : project.image}
                           alt={project.title}
                           className={`w-full transition-all duration-500 ${
-                            isExpanded ? 'h-[500px] object-contain' : 'h-56 object-cover group-hover:scale-105'
+                            isExpanded ? 'h-[500px] object-contain' : 'h-56 object-cover group-hover:scale-105 opacity-80 group-hover:opacity-100'
                           }`}
                         />
                       </AnimatePresence>
@@ -87,13 +89,13 @@ const Projects = () => {
                         <>
                           <button 
                             onClick={() => prevImg(project.gallery)}
-                            className="absolute left-4 top-1/2 -translate-y-1/2 p-1.5 rounded-full bg-black/40 text-white hover:bg-[#7A3F91] transition-colors cursor-pointer z-10"
+                            className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 text-white hover:bg-[#A855F7] transition-colors cursor-pointer z-10"
                           >
                             <ChevronLeft className="h-6 w-6" />
                           </button>
                           <button 
                             onClick={() => nextImg(project.gallery)}
-                            className="absolute right-4 top-1/2 -translate-y-1/2 p-1.5 rounded-full bg-black/40 text-white hover:bg-[#7A3F91] transition-colors cursor-pointer z-10"
+                            className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 text-white hover:bg-[#A855F7] transition-colors cursor-pointer z-10"
                           >
                             <ChevronRight className="h-6 w-6" />
                           </button>
@@ -101,10 +103,10 @@ const Projects = () => {
                       )}
 
                       {!isExpanded && (
-                        <div className="absolute inset-0 bg-[#2B0D3E]/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <div className="absolute inset-0 bg-[#A855F7]/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
                           <Button 
                             onClick={() => handleExpand(project.id)}
-                            className="rounded-full bg-[#7A3F91] text-white cursor-pointer text-sm font-mono"
+                            className="rounded-full bg-white text-black hover:bg-black hover:text-white cursor-pointer text-sm font-bold font-mono transition-colors"
                           >
                             <ExternalLink className="h-4 w-4 mr-2" /> View Details
                           </Button>
@@ -115,32 +117,26 @@ const Projects = () => {
                     {/* Details Section */}
                     <div className={`p-6 flex flex-col ${isExpanded ? 'lg:w-2/5' : 'w-full flex-grow'}`}>
                       <div className="flex justify-between items-start mb-3">
-                        {/* Typography: Space Grotesk (font-display) */}
-                        <motion.h3 layout="position" className={`${isExpanded ? 'text-2xl' : 'text-lg'} font-mono font-bold text-[#2B0D3E]`}>
+                        <motion.h3 layout="position" className={`${isExpanded ? 'text-2xl' : 'text-lg'} font-mono font-bold text-white uppercase`}>
                           {project.title}
                         </motion.h3>
                         {isExpanded && (
-                          <button onClick={() => setExpandedId(null)} className="text-[#7A3F91] hover:rotate-90 transition-transform cursor-pointer">
+                          <button onClick={() => setExpandedId(null)} className="text-[#A855F7] hover:rotate-90 transition-transform cursor-pointer">
                             <X className="h-6 w-6" />
                           </button>
                         )}
                       </div>
                       
-                      {/* Typography: Inter (font-sans) | Alignment: text-justify */}
-                      <motion.div layout="position" className="text-[#7A3F91] mb-5 leading-relaxed text-sm font-mono text-justify">
+                      <motion.div layout="position" className="text-white/70 mb-5 leading-relaxed text-sm font-mono text-justify">
                         {!isExpanded ? (
                           <>
-                            {project.description.length > 100 
-                              ? `${project.description.substring(0, 100)}... ` 
-                              : project.description}
-                            {project.description.length > 100 && (
-                              <button
+                            {project.description.substring(0, 100)}...
+                            <button
                                 onClick={() => handleExpand(project.id)}
-                                className="text-[#2B0D3E] font-semibold hover:underline ml-1 cursor-pointer"
+                                className="text-[#A855F7] font-bold hover:underline ml-1 cursor-pointer"
                               >
                                 See More
                               </button>
-                            )}
                           </>
                         ) : (
                           project.description
@@ -149,8 +145,8 @@ const Projects = () => {
 
                       <motion.div layout="position" className="flex flex-wrap gap-2 mb-6 mt-auto">
                         {project.techStack.map((tech, idx) => (
-                          <div key={idx} className="flex items-center gap-1.5 text-[11px] font-mono font-medium p-1.5 rounded-md bg-[#2B0D3E] text-[#C59DD9]">
-                            {iconMap[tech]}
+                          <div key={idx} className="flex items-center gap-1.5 text-[11px] font-mono font-bold p-1.5 px-2 rounded-md border border-white/10 bg-black text-white hover:border-[#A855F7] transition-colors">
+                            <span className="text-[#A855F7]">{iconMap[tech]}</span>
                             {tech}
                           </div>
                         ))}
@@ -164,7 +160,7 @@ const Projects = () => {
                           className="flex gap-4"
                         >
                           <Button 
-                            className="bg-[#7A3F91] text-white px-6 cursor-pointer text-sm font-mono"
+                            className="bg-[#A855F7] text-white hover:bg-white hover:text-black px-6 cursor-pointer text-sm font-bold font-mono transition-colors shadow-lg shadow-[#A855F7]/30"
                             onClick={() => window.open(project.link, '_blank', 'noopener,noreferrer')}
                           >
                             Visit Site
@@ -173,36 +169,6 @@ const Projects = () => {
                       )}
                     </div>
                   </div>
-
-                  {/* Gallery Expansion */}
-                  <AnimatePresence>
-                    {isExpanded && project.gallery && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.4, ease: "easeInOut" }}
-                        className="p-6 border-t border-[#C59DD9]/20 bg-white"
-                      >
-                        {/* Typography: Space Grotesk (font-display) */}
-                        <h4 className="text-lg font-mono font-bold text-[#2B0D3E] mb-4">Project Screenshots</h4>
-                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
-                          {project.gallery.map((src, i) => (
-                            <motion.img
-                              key={i}
-                              whileHover={{ scale: 1.05 }}
-                              onClick={() => setCurrentImgIndex(i)} 
-                              src={src}
-                              className={`rounded-lg cursor-pointer border-2 transition-all h-20 w-full object-cover ${
-                                currentImgIndex === i ? 'border-[#7A3F91] shadow-sm' : 'border-transparent opacity-60 hover:opacity-100'
-                              }`}
-                              alt={`Gallery ${i}`}
-                            />
-                          ))}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
                 </motion.div>
               );
             })}

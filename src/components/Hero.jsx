@@ -16,12 +16,12 @@ const Hero = () => {
 
   const letterVariants = {
     hidden: { 
-      color: "rgba(0,0,0,0)", 
-      WebkitTextStroke: '1px #F2EAF7' 
+      color: "rgba(255,255,255,0)", 
+      WebkitTextStroke: '2px #A855F7' 
     },
     visible: (i) => ({
-      color: "#F2EAF7",
-      WebkitTextStroke: '1px #F2EAF7',
+      color: "#A855F7",
+      WebkitTextStroke: '2px #A855F7',
       transition: {
         duration: 0.8,
         delay: i * 0.1,
@@ -33,12 +33,18 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[#0f051d]">
-      {/* Background radial glow */}
-      <div className="absolute inset-0 opacity-30" 
-           style={{ background: 'radial-gradient(circle at 50% 50%, #2b0d3e 0%, #0f051d 100%)' }} />
+    <section 
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      style={{ 
+        background: 'linear-gradient(180deg, #0A0A0A 0%, #161616 100%)' 
+      }}
+    >
+      {/* Neon Atmospheric Glow */}
+      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full opacity-20 blur-[120px]" 
+           style={{ backgroundColor: '#A855F7' }} />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[30%] h-[30%] rounded-full opacity-10 blur-[100px]" 
+           style={{ backgroundColor: '#FFFFFF' }} />
 
-      {/* Added py-20 for mobile spacing and py-0 for desktop */}
       <div className="container mx-auto px-6 py-20 lg:py-0 grid lg:grid-cols-12 gap-12 items-center relative z-10">
         
         {/* LEFT: Bio & Name */}
@@ -49,7 +55,6 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
           >
           
-            {/* Adjusted leading-tight for mobile and leading-[0.85] for desktop */}
             <h1 className="font-display text-6xl md:text-9xl font-black leading-tight lg:leading-[0.85] mb-8">
               <div className="flex flex-wrap overflow-hidden">
                 {name.split("").map((letter, index) => (
@@ -64,20 +69,19 @@ const Hero = () => {
                   </motion.span>
                 ))}
               </div>
-              {/* Added mt-4 for mobile spacing between name and title */}
-              <span className="font-display text-4xl md:text-6xl text-transparent block mt-4 md:mt-2" style={{ WebkitTextStroke: '1px #C59DD9' }}>
+              <span className="font-display text-4xl md:text-6xl text-transparent block mt-4 md:mt-2" style={{ WebkitTextStroke: '2px #FFFFFF' }}>
                 WEB DEVELOPER
               </span>
             </h1>
 
-            <p className="font-mono text-[#F2EAF7] opacity-70 text-lg md:text-xl max-w-lg mb-10 leading-relaxed font-light italic">
+            <p className="font-mono text-white/70 text-lg md:text-xl max-w-lg mb-10 leading-relaxed font-medium italic">
               I build high-performance web applications that look as good as they run. I focus on turning complex technical requirements into simple, functional tools.
             </p>
             
             <div className="flex flex-wrap gap-4 items-center font-mono font-medium">
               <Button 
                 onClick={() => scrollToSection('projects')}
-                className="bg-[#C59DD9] text-[#1a0b2e] hover:bg-[#F2EAF7] rounded-full px-8 py-7 transition-all flex items-center gap-2 group border-none font-bold cursor-pointer"
+                className="bg-[#A855F7] text-white hover:bg-white hover:text-black rounded-full px-8 py-7 transition-all flex items-center gap-2 group border-none font-bold cursor-pointer shadow-lg shadow-[#A855F7]/30"
               >
                 VIEW PROJECTS <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -85,7 +89,7 @@ const Hero = () => {
               <Button 
                 onClick={() => scrollToSection('contact')}
                 variant="outline"
-                className="border-2 border-[#C59DD9] text-[#C59DD9] hover:bg-[#C59DD9] hover:text-[#1a0b2e] rounded-full px-8 py-7 transition-all flex items-center gap-2 font-bold cursor-pointer bg-transparent"
+                className="border-2 border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-7 transition-all flex items-center gap-2 font-bold cursor-pointer bg-transparent"
               >
                 CONTACT ME <Mail className="w-4 h-4" />
               </Button>
@@ -99,7 +103,7 @@ const Hero = () => {
             {[...Array(4)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute w-[3px] bg-[#C59DD9] rounded-full z-30"
+                className="absolute w-[3px] bg-[#A855F7] rounded-full z-30"
                 animate={{ 
                   top: ["-10%", "110%"],
                   left: i % 2 === 0 ? ["22%", "-2%"] : ["102%", "78%"],
@@ -111,21 +115,21 @@ const Hero = () => {
                   delay: i * 0.5,
                   ease: "linear"
                 }}
-                style={{ height: '50px', boxShadow: '0 0 12px #C59DD9' }}
+                style={{ height: '50px', boxShadow: '0 0 15px #A855F7' }}
               />
             ))}
 
             <motion.div 
-              className="relative z-20 w-full h-full bg-[#1a0b2e] overflow-hidden border-x border-[#C59DD9]/10 shadow-2xl"
+              className="relative z-20 w-full h-full bg-[#111111] overflow-hidden border-x border-[#A855F7]/30 shadow-2xl"
               style={{ clipPath: 'polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%)' }}
             >
               <img 
                 src={profilePic} 
                 alt="Symond" 
-                className="w-full h-full object-cover grayscale brightness-90 hover:grayscale-0 transition-all duration-700 scale-[1] -translate-y-0.5"
+                className="w-full h-full object-cover grayscale brightness-110 contrast-125 hover:grayscale-0 transition-all duration-700 scale-[1] -translate-y-0.5"
               />
             </motion.div>
-            <div className="absolute -inset-10 bg-[#C59DD9]/5 blur-[100px] rounded-full" />
+            <div className="absolute -inset-10 bg-[#A855F7]/10 blur-[100px] rounded-full" />
           </div>
         </div>
       </div>

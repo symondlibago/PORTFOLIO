@@ -157,4 +157,19 @@ export const projects = [
     ],
     featured: false
   },
+
+  {
+    id: 'yuna',
+    title: 'Studio Yuna',
+    description: 'This website is a modern fashion-inspired landing page designed to showcase curated clothing collections with a minimalist and premium aesthetic. It features a slideshow hero section, smooth animations, and visually engaging product displays to create an elegant browsing experience.',
+    image: '/yuna/yuna1.png',
+    techStack: ['React', 'Tailwind CSS'],
+    gallery: [
+      '/yuna/yuna1.png', '/yuna/yuna2.png', '/yuna/yuna3.png',
+      '/yuna/yuna4.png', '/yuna/yuna5.png', '/yuna/yuna6.png',
+      '/yuna/yuna7.png', '/yuna/yuna8.png', '/yuna/yuna9.png',
+    ],
+    featured: false
+  },
+
 ];
