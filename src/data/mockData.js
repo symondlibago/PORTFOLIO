@@ -176,11 +176,15 @@ export const projects = [
     id: 'yunails',
     title: 'YuNails — Luxury Artistry',
     description: 'This project is a fully responsive luxury nail studio website concept built to showcase modern nail extensions and refined nail artistry. The design blends soft feminine tones with minimal structure, creating an elegant and immersive brand presence.',
-    image: '/yunails/yunails1.png',
+    image: '/yunails/yunail1.png',
     techStack: ['React', 'Tailwind CSS'],
     gallery: [
-      '/yunails/yunails1.png', '/yunails/yunails2.png', '/yunails/yunails3.png',
-      '/yunails/yunails4.png', '/yunails/yunails5.png', '/yunails/yunails6.png',
+      '/yunails/yunail1.png', '/yunails/yunail2.png', '/yunails/yunail3.png',
+      '/yunails/yunail4.png', '/yunails/yunail5.png', '/yunails/yunail6.png',
+      '/yunails/yunail7.png', '/yunails/yunail8.png', '/yunails/yunail9.png',
+      '/yunails/yunail10.png', '/yunails/yunail11.png', '/yunails/yunail12.png',
+      '/yunails/yunail13.png',
+
     ],
     featured: false
   },
