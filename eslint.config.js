@@ -4,7 +4,8 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 
 export default [
-  { ignores: ['dist'] },
+  // public/ holds vendored, pre-minified assets (the Draco decoder) — not ours to lint.
+  { ignores: ['dist', 'public'] },
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -23,7 +24,13 @@ export default [
     rules: {
       ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      // Without eslint-plugin-react there is no jsx-uses-vars, so anything used
+      // only inside JSX reads as unused. Capitalised components are covered by
+      // ^[A-Z_]; `motion` is the one lowercase JSX namespace we import.
+      'no-unused-vars': [
+        'error',
+        { varsIgnorePattern: '^[A-Z_]|^motion$', argsIgnorePattern: '^[A-Z_]|^_' },
+      ],
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },

@@ -78,6 +78,9 @@ jspm_packages/
 tmp/
 temp/
 
+# Original PNGs, kept locally after the AVIF conversion (see scripts/archive-png.mjs)
+_png-originals/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

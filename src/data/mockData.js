@@ -14,16 +14,31 @@ export const skills = [
 
 export const projects = [
   {
+    id: 'nourish',
+    title: 'Nourish — Offline Social Club',
+    description: 'A live site for Nourish, a Halifax social club that runs real-life events instead of another group chat. The main job was getting people from browsing to actually booking a spot, so the calendar does most of the heavy lifting — filter by date, category or the kind of night you are after, then reserve or set a reminder without leaving the page. There is also a long-form "The Why" page, an FAQ and contact form, and a dashboard for members and guests. Light and dark themes throughout, and page changes that fade instead of jolting you around.',
+    image: '/nourish/nourish1.avif',
+    link: 'https://atnourish.ca',
+    techStack: ['Astro', 'TypeScript', 'Tailwind CSS'],
+    gallery: [
+      '/nourish/nourish1.avif', '/nourish/nourish2.avif', '/nourish/nourish3.avif',
+      '/nourish/nourish7.avif', '/nourish/nourish8.avif', '/nourish/nourish4.avif',
+      '/nourish/nourish5.avif', '/nourish/nourish6.avif',
+    ],
+    featured: false
+  },
+
+  {
     id: 'kohi-shop',
     title: 'Kohi Coffee Shop',
     description: 'A premium static coffee shop interface built with a focus on minimalist aesthetics and smooth user interactions.',
-    image: '/kohi/kohihome.png',
+    image: '/kohi/kohihome.avif',
     techStack: ['HTML', 'CSS', 'JavaScript'],
     gallery: [
-      '/kohi/kohi1.png', '/kohi/kohi2.png', '/kohi/kohi3.png',
-      '/kohi/kohi4.png', '/kohi/kohi5.png', '/kohi/kohi6.png',
-      '/kohi/kohi7.png', '/kohi/kohi8.png', '/kohi/kohi9.png',
-      '/kohi/kohi10.png', '/kohi/kohi11.png', '/kohi/kohi12.png'
+      '/kohi/kohi1.avif', '/kohi/kohi2.avif', '/kohi/kohi3.avif',
+      '/kohi/kohi4.avif', '/kohi/kohi5.avif', '/kohi/kohi6.avif',
+      '/kohi/kohi7.avif', '/kohi/kohi8.avif', '/kohi/kohi9.avif',
+      '/kohi/kohi10.avif', '/kohi/kohi11.avif', '/kohi/kohi12.avif'
     ],
     featured: false
   },
@@ -32,12 +47,12 @@ export const projects = [
     id: 'tupad',
     title: 'Tupad - DOLE',
     description: 'A web-based monitoring system developed to support the implementation of the TUPAD (Tulong Panghanapbuhay sa Ating Disadvantaged/Displaced Workers) emergency employment program. The system streamlines the management of beneficiary records, work assignments, attendance tracking, and payroll monitoring. It provides real-time data tracking, organized reporting, and improved transparency in monitoring work program progress. The platform was designed to enhance efficiency, reduce manual documentation, and support accurate record-keeping for program coordinators.',
-    image: '/tupad/tupacover.png',
+    image: '/tupad/tupacover.avif',
     techStack: ['React', 'CSS', 'MUI', 'Laravel','MySQL'],
     gallery: [
-      '/tupad/tupacover.png', '/tupad/tupad1.png', '/tupad/tupad2.png',
-      '/tupad/tupad3.png', '/tupad/tupad4.png', '/tupad/tupad5.png',
-      '/tupad/tupad6.png', '/tupad/tupad7.png',
+      '/tupad/tupacover.avif', '/tupad/tupad1.avif', '/tupad/tupad2.avif',
+      '/tupad/tupad3.avif', '/tupad/tupad4.avif', '/tupad/tupad5.avif',
+      '/tupad/tupad6.avif', '/tupad/tupad7.avif',
     ],
     featured: false
   },
@@ -46,12 +61,12 @@ export const projects = [
     id: 'gip',
     title: 'GIP - DOLE',
     description: 'A digital monitoring system designed to manage and track interns under the Government Internship Program (GIP). The system handles intern profiling,stipend monitoring, and report generation. It streamlines administrative processes, improves data accuracy, and enhances transparency in monitoring intern performance and program implementation.',
-    image: '/gip/gipcover.png',
+    image: '/gip/gipcover.avif',
     techStack: ['React', 'CSS', 'MUI', 'Laravel','MySQL'],
     gallery: [
-      '/gip/gipcover.png', '/gip/gip1.png', '/gip/gip2.png',
-      '/gip/gip3.png', '/gip/gip4.png', '/gip/gip5.png',
-      '/gip/gip6.png',
+      '/gip/gipcover.avif', '/gip/gip1.avif', '/gip/gip2.avif',
+      '/gip/gip3.avif', '/gip/gip4.avif', '/gip/gip5.avif',
+      '/gip/gip6.avif',
     ],
     featured: false
   },
@@ -60,18 +75,18 @@ export const projects = [
     id: 'benoya',
     title: 'BA Monitoring System',
     description: 'A comprehensive web-based Business Administration (BA) Monitoring System designed to centralize and manage operational workflows within the organization. The system integrates multiple monitoring modules into one unified platform to improve efficiency, accountability, and real-time data visibility.',
-    image: '/benoya/bacover.png',
+    image: '/benoya/bacover.avif',
     techStack: ['React', 'Tailwind CSS', 'Laravel','MySQL'],
     gallery: [
-      '/benoya/bacover.png', '/benoya/ba1.png', '/benoya/ba2.png',
-      '/benoya/ba3.png', '/benoya/ba4.png', '/benoya/ba5.png',
-      '/benoya/ba6.png', '/benoya/ba7.png', '/benoya/ba8.png',
-      '/benoya/ba9.png', '/benoya/ba10.png', '/benoya/ba11.png',
-      '/benoya/ba12.png', '/benoya/ba13.png', '/benoya/ba14.png',
-      '/benoya/ba15.png', '/benoya/ba16.png', '/benoya/ba17.png',
-      '/benoya/ba18.png', '/benoya/ba19.png', '/benoya/ba20.png',
-      '/benoya/ba21.png', '/benoya/ba22.png', '/benoya/ba23.png',
-      '/benoya/ba24.png',
+      '/benoya/bacover.avif', '/benoya/ba1.avif', '/benoya/ba2.avif',
+      '/benoya/ba3.avif', '/benoya/ba4.avif', '/benoya/ba5.avif',
+      '/benoya/ba6.avif', '/benoya/ba7.avif', '/benoya/ba8.avif',
+      '/benoya/ba9.avif', '/benoya/ba10.avif', '/benoya/ba11.avif',
+      '/benoya/ba12.avif', '/benoya/ba13.avif', '/benoya/ba14.avif',
+      '/benoya/ba15.avif', '/benoya/ba16.avif', '/benoya/ba17.avif',
+      '/benoya/ba18.avif', '/benoya/ba19.avif', '/benoya/ba20.avif',
+      '/benoya/ba21.avif', '/benoya/ba22.avif', '/benoya/ba23.avif',
+      '/benoya/ba24.avif',
     ],
     featured: false
   },
@@ -80,13 +95,13 @@ export const projects = [
     id: 'pageantry',
     title: 'Pageantry Tabulation System',
     description: 'A web-based Pageantry Tabulation System developed to digitize and automate the scoring process for beauty pageants and competitions, featuring a centralized admin dashboard for managing candidates, judges, scoring criteria, and real-time result computation. Judges are provided with secure individual accounts to submit scores digitally during live events, while the system automatically calculates totals, rankings, and category awards to minimize human error and ensure accurate, transparent results. The platform was successfully deployed and used in Mr. & Ms. Panagbanga 2025 and Mr. & Ms. Vineyard 2026, significantly improving efficiency, reducing computation errors, and delivering faster result generation compared to manual tabulation methods.',
-    image: '/tabulation/tabcover.png',
+    image: '/tabulation/tabcover.avif',
     techStack: ['React', 'Tailwind CSS', 'Laravel','MySQL'],
     gallery: [
-      '/tabulation/tabcover.png', '/tabulation/tab1.png', '/tabulation/tab2.png',
-      '/tabulation/tab3.png', '/tabulation/tab4.png', '/tabulation/tab5.png',
-      '/tabulation/tab6.png', '/tabulation/tab7.png', '/tabulation/tab8.png',
-      '/tabulation/tab9.png', '/tabulation/tab10.png', '/tabulation/tab11.png',
+      '/tabulation/tabcover.avif', '/tabulation/tab1.avif', '/tabulation/tab2.avif',
+      '/tabulation/tab3.avif', '/tabulation/tab4.avif', '/tabulation/tab5.avif',
+      '/tabulation/tab6.avif', '/tabulation/tab7.avif', '/tabulation/tab8.avif',
+      '/tabulation/tab9.avif', '/tabulation/tab10.avif', '/tabulation/tab11.avif',
       '/tabulation/tab12.jpg', '/tabulation/tab13.jpg', '/tabulation/tab14.jpg',
       '/tabulation/tab15.jpg',
     ],
@@ -97,14 +112,14 @@ export const projects = [
     id: 'computer',
     title: 'Computer Tracking System',
     description: 'A web-based Computer Tracking System developed for the library to monitor computer laboratory availability and manage student access efficiently. The system allows students to view real-time computer occupancy status and determine whether the laboratory is full or available. If all units are occupied, students can join a digital queue, and the system automatically notifies them when a computer becomes available. By replacing manual monitoring and physical waiting lines, the platform improves fairness, reduces congestion, and enhances the overall student experience while ensuring efficient computer usage management.',
-    image: '/computer/comcover.png',
+    image: '/computer/comcover.avif',
     techStack: ['React', 'Tailwind CSS', 'Laravel','MySQL'],
     gallery: [
-      '/computer/comcover.png', '/computer/comp1.png', '/computer/comp2.png',
-      '/computer/comp3.png', '/computer/comp4.png', '/computer/comp5.png',
-      '/computer/comp6.png', '/computer/comp7.png', '/computer/comp8.png',
-      '/computer/comp9.png', '/computer/comp10.png', '/computer/comp11.png',
-      '/computer/com12.png', '/computer/com13.png', '/computer/com14.png',
+      '/computer/comcover.avif', '/computer/comp1.avif', '/computer/comp2.avif',
+      '/computer/comp3.avif', '/computer/comp4.avif', '/computer/comp5.avif',
+      '/computer/comp6.avif', '/computer/comp7.avif', '/computer/comp8.avif',
+      '/computer/comp9.avif', '/computer/comp10.avif', '/computer/comp11.avif',
+      '/computer/com12.avif', '/computer/com13.avif', '/computer/com14.avif',
       '/computer/com15.jpg',
     ],
     featured: false
@@ -114,18 +129,18 @@ export const projects = [
     id: 'school',
     title: 'School Management System',
     description: 'A web-based School Management System designed to streamline academic and administrative processes through a role-based platform with three user types: Admin, Instructor, and Student. The system provides separate dashboards and functionalities for each role, allowing administrators to manage users, courses, and academic records; instructors to handle class management, grading, and student performance tracking; and students to view enrolled subjects, grades, and academic information. By centralizing academic operations into a single platform, the system improves efficiency, data accuracy, and communication between administrators, faculty, and students.',
-    image: '/sm/smcover.png',
+    image: '/sm/smcover.avif',
     techStack: ['React', 'Tailwind CSS', 'Laravel','MySQL'],
     gallery: [
-      '/sm/smcover.png', '/sm/sm1.png', '/sm/sm2.png',
-      '/sm/sm3.png', '/sm/sm4.png', '/sm/sm5.png',
-      '/sm/sm6.png', '/sm/sm7.png', '/sm/sm8.png',
-      '/sm/sm9.png', '/sm/sm10.png', '/sm/sm11.png',
-      '/sm/sm12.png', '/sm/sm13.png', '/sm/sm14.png',
-      '/sm/sm15.png', '/sm/sm16.png', '/sm/sm17.png',
-      '/sm/sm18.png', '/sm/sm19.png', '/sm/sm20.png',
-      '/sm/sm21.png', '/sm/sm22.png', '/sm/sm23.png',
-      '/sm/sm24.png', '/sm/sm25.png',
+      '/sm/smcover.avif', '/sm/sm1.avif', '/sm/sm2.avif',
+      '/sm/sm3.avif', '/sm/sm4.avif', '/sm/sm5.avif',
+      '/sm/sm6.avif', '/sm/sm7.avif', '/sm/sm8.avif',
+      '/sm/sm9.avif', '/sm/sm10.avif', '/sm/sm11.avif',
+      '/sm/sm12.avif', '/sm/sm13.avif', '/sm/sm14.avif',
+      '/sm/sm15.avif', '/sm/sm16.avif', '/sm/sm17.avif',
+      '/sm/sm18.avif', '/sm/sm19.avif', '/sm/sm20.avif',
+      '/sm/sm21.avif', '/sm/sm22.avif', '/sm/sm23.avif',
+      '/sm/sm24.avif', '/sm/sm25.avif',
     ],
     featured: false
   },
@@ -134,12 +149,12 @@ export const projects = [
     id: 'matria',
     title: 'Matria Marine Services',
     description: 'A primarily frontend-focused web system developed for Matria Marine Services (www.matriamarine.com) to present company information and support basic administrative content management. The platform provides a clean and responsive user interface designed to showcase services, operations, and organizational information. The system includes a simple backend functionality that allows administrators to upload and manage images for content updates. Built to deliver an intuitive user experience, the project emphasizes layout design, responsiveness, and interface presentation rather than complex server-side processing.',
-    image: '/matria/matriacov.png',
+    image: '/matria/matriacov.avif',
     link: 'https://www.matriamarine.com',
     techStack: ['React', 'Tailwind CSS', 'Laravel','MySQL','S3 Bucket'],
     gallery: [
-      '/matria/matriacov.png', '/matria/matria1.png', '/matria/matria2.png',
-      '/matria/matria3.png', '/matria/matria4.png'
+      '/matria/matriacov.avif', '/matria/matria1.avif', '/matria/matria2.avif',
+      '/matria/matria3.avif', '/matria/matria4.avif'
     ],
     featured: false
   },
@@ -148,12 +163,12 @@ export const projects = [
     id: 'payroll',
     title: 'Payroll System',
     description: 'A web-based Payroll and Employee Management System designed to streamline salary computation and workforce administration. The system manages employee records, job roles, and compensation details while automating payroll calculations based on configured rates and work data. It provides structured employee profiling, payroll tracking, and organized record management to ensure accurate salary processing and reduced administrative workload. By digitizing payroll operations, the platform improves efficiency, minimizes computation errors, and enhances transparency in employee compensation management.',
-    image: '/payroll/payrollcov.png',
+    image: '/payroll/payrollcov.avif',
     techStack: ['React', 'Tailwind CSS', 'Laravel','MySQL'],
     gallery: [
-      '/payroll/payrollcov.png', '/payroll/payroll1.png', '/payroll/payroll2.png',
-      '/payroll/payroll3.png', '/payroll/payroll4.png', '/payroll/payroll5.png',
-      '/payroll/payroll6.png',
+      '/payroll/payrollcov.avif', '/payroll/payroll1.avif', '/payroll/payroll2.avif',
+      '/payroll/payroll3.avif', '/payroll/payroll4.avif', '/payroll/payroll5.avif',
+      '/payroll/payroll6.avif',
     ],
     featured: false
   },
@@ -162,31 +177,31 @@ export const projects = [
     id: 'yuna',
     title: 'Studio Yuna',
     description: 'This website is a modern fashion-inspired landing page designed to showcase curated clothing collections with a minimalist and premium aesthetic. It features a slideshow hero section, smooth animations, and visually engaging product displays to create an elegant browsing experience.',
-    image: '/yuna/yuna1.png',
+    image: '/yuna/yuna1.avif',
     techStack: ['React', 'Tailwind CSS'],
     gallery: [
-      '/yuna/yuna1.png', '/yuna/yuna2.png', '/yuna/yuna3.png',
-      '/yuna/yuna4.png', '/yuna/yuna5.png', '/yuna/yuna6.png',
-      '/yuna/yuna7.png', '/yuna/yuna8.png', '/yuna/yuna9.png',
+      '/yuna/yuna1.avif', '/yuna/yuna2.avif', '/yuna/yuna3.avif',
+      '/yuna/yuna4.avif', '/yuna/yuna5.avif', '/yuna/yuna6.avif',
+      '/yuna/yuna7.avif', '/yuna/yuna8.avif', '/yuna/yuna9.avif',
     ],
     featured: false
   },
 
-  // {
-  //   id: 'yunails',
-  //   title: 'YuNails — Luxury Artistry',
-  //   description: 'This project is a fully responsive luxury nail studio website concept built to showcase modern nail extensions and refined nail artistry. The design blends soft feminine tones with minimal structure, creating an elegant and immersive brand presence.',
-  //   image: '/yunails/yunail1.png',
-  //   techStack: ['React', 'Tailwind CSS'],
-  //   gallery: [
-  //     '/yunails/yunail1.png', '/yunails/yunail2.png', '/yunails/yunail3.png',
-  //     '/yunails/yunail4.png', '/yunails/yunail5.png', '/yunails/yunail6.png',
-  //     '/yunails/yunail7.png', '/yunails/yunail8.png', '/yunails/yunail9.png',
-  //     '/yunails/yunail10.png', '/yunails/yunail11.png', '/yunails/yunail12.png',
-  //     '/yunails/yunail13.png',
+  {
+    id: 'yunails',
+    title: 'YuNails — Luxury Artistry',
+    description: 'This project is a fully responsive luxury nail studio website concept built to showcase modern nail extensions and refined nail artistry. The design blends soft feminine tones with minimal structure, creating an elegant and immersive brand presence.',
+    image: '/yunails/yunail1.avif',
+    techStack: ['React', 'Tailwind CSS'],
+    gallery: [
+      '/yunails/yunail1.avif', '/yunails/yunail2.avif', '/yunails/yunail3.avif',
+      '/yunails/yunail4.avif', '/yunails/yunail5.avif', '/yunails/yunail6.avif',
+      '/yunails/yunail7.avif', '/yunails/yunail8.avif', '/yunails/yunail9.avif',
+      '/yunails/yunail10.avif', '/yunails/yunail11.avif', '/yunails/yunail12.avif',
+      '/yunails/yunail13.avif',
 
-  //   ],
-  //   featured: false
-  // },
+    ],
+    featured: false
+  },
 
 ];
