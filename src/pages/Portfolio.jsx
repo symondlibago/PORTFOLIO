@@ -13,10 +13,6 @@ const Portfolio = () => {
   const location = useLocation();
   const lenis = useLenis();
   const prefersReduced = useReducedMotion();
-  // The intro is a permanent scroll-linked section, not a one-shot: scrolling
-  // down scatters it, scrolling back up re-assembles it. Both it and its runway
-  // must render unconditionally — removing either mid-scroll would resize the
-  // document and yank the reader somewhere they did not ask to be.
   const showIntro = !prefersReduced;
 
   // Arriving from another route with a section in mind (nav click on /work/:id).
@@ -26,7 +22,7 @@ const Portfolio = () => {
     const el = document.getElementById(target);
     if (!el) return;
     const t = setTimeout(() => {
-      if (lenis) lenis.scrollTo(el, { duration: 1.2, offset: -72 });
+      if (lenis) lenis.scrollTo(el, { duration: 1.2, offset: -72, force: true });
       else el.scrollIntoView({ behavior: 'smooth' });
     }, 260);
     return () => clearTimeout(t);

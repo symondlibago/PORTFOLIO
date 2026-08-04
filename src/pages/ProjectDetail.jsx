@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { useLenis } from 'lenis/react';
 import { ArrowLeft, ArrowUpRight, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { projects } from '../data/mockData';
 import { Reveal, RevealLines } from './../components/Reveal';
@@ -8,6 +9,8 @@ import TechList from './../components/TechList';
 
 /** Full-screen image viewer for the gallery. */
 const Lightbox = ({ images, index, onClose, onPrev, onNext }) => {
+  const lenis = useLenis();
+
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === 'Escape') onClose();
@@ -15,14 +18,20 @@ const Lightbox = ({ images, index, onClose, onPrev, onNext }) => {
       if (e.key === 'ArrowRight') onNext();
     };
     window.addEventListener('keydown', onKey);
-    // Lock body scroll while the viewer is open.
+
+    // Lock scroll. `body { overflow: hidden }` alone is not enough: Lenis
+    // drives scrolling itself and happily keeps going behind the overlay, so
+    // it has to be stopped explicitly.
     const prev = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+    lenis?.stop();
+
     return () => {
       window.removeEventListener('keydown', onKey);
       document.body.style.overflow = prev;
+      lenis?.start();
     };
-  }, [onClose, onPrev, onNext]);
+  }, [onClose, onPrev, onNext, lenis]);
 
   return (
     <motion.div
@@ -70,11 +79,14 @@ const Lightbox = ({ images, index, onClose, onPrev, onNext }) => {
 const ProjectDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const lenis = useLenis();
   const prefersReduced = useReducedMotion();
   const project = projects.find((p) => p.id === id);
   const [lightbox, setLightbox] = useState(null);
-
-  useEffect(() => { window.scrollTo(0, 0); }, [id]);
+  useEffect(() => {
+    if (lenis) lenis.scrollTo(0, { immediate: true, force: true });
+    else window.scrollTo(0, 0);
+  }, [id, lenis]);
 
   if (!project) {
     return (
@@ -97,7 +109,7 @@ const ProjectDetail = () => {
       <div className="mx-auto max-w-[1600px] px-5 md:px-8">
         <Reveal>
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/', { state: { scrollTo: 'work' } })}
             className="mb-10 inline-flex items-center gap-2 font-display text-[11px] font-semibold uppercase tracking-[0.22em] text-subtle transition-colors hover:text-ink cursor-pointer"
           >
             <ArrowLeft className="h-4 w-4" /> All work
