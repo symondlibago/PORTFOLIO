@@ -2,11 +2,8 @@
 
 /* Self-hosted webfonts — no external request, no render-blocking third party.
    Latin subsets only; these are the only glyphs the site uses. */
-@import "@fontsource-variable/space-grotesk/wght.css";
-@import "@fontsource/space-mono/latin-400.css";
-@import "@fontsource/space-mono/latin-700.css";
-@import "@fontsource/instrument-serif/latin-400.css";
-@import "@fontsource/instrument-serif/latin-400-italic.css";
+@import "@fontsource-variable/oswald/wght.css";
+@import "@fontsource-variable/dm-sans/opsz.css";
 
 @theme {
   /* Colors */
@@ -53,9 +50,11 @@
   /* Typography. Tailwind v4 generates font-* utilities from these, which is why
      they live here and not in tailwind.config.js — that file is NOT read by v4
      unless a @config directive points at it. */
-  --font-display: "Space Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+  /* Display: Oswald stands in for Ryse's Tungsten (Hoefler&Co — commercial,
+     cannot be embedded). Body: Inter stands in for Helvetica Neue (Monotype). */
+  --font-display: "Oswald Variable", "Arial Narrow", ui-sans-serif, sans-serif;
+  --font-sans: "DM Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "DM Sans Variable", ui-sans-serif, system-ui, sans-serif;
 
   /* Portfolio palette — flips between themes, see :root / .dark below */
   --color-surface: var(--surface);
@@ -97,11 +96,11 @@
     /* Light theme (default). --brand is a deeper purple here so it still
        clears AA contrast against a white background. */
     --surface: #ffffff;
-    --elev: #f4f4f5;
-    --line: #e4e4e7;
-    --ink: #18181b;
-    --subtle: #52525b;
-    --brand: #9333ea;
+    --elev: #f4f4f4;
+    --line: #e3e3e3;
+    --ink: #040404;
+    --subtle: #6b6b6b;
+    --brand: #6d28d9;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -130,12 +129,12 @@
     --chart-5: 340 75% 55%;
 
     /* Dark theme — the portfolio's original palette. */
-    --surface: #0a0a0a;
-    --elev: #161616;
-    --line: #27272a;
-    --ink: #ffffff;
-    --subtle: #a1a1aa;
-    --brand: #a855f7;
+    --surface: #0b0b0b;
+    --elev: #151515;
+    --line: #262626;
+    --ink: #fafafa;
+    --subtle: #9c9c9c;
+    --brand: #a78bfa;
   }
 }
 
@@ -152,7 +151,7 @@
   }
   body {
     margin: 0;
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     @apply bg-background text-foreground;

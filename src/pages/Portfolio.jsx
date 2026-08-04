@@ -1,48 +1,48 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useLenis } from 'lenis/react';
+import { useReducedMotion } from 'framer-motion';
+import PortraitIntro, { INTRO_VH } from '../components/PortraitIntro';
 import Hero from '../components/Hero';
+import Work from '../components/Work';
+import About from '../components/About';
 import Skills from '../components/Skills';
-import Projects from '../components/Projects';
 import Contact from '../components/Contact';
-import ThemeToggle from '../components/ThemeToggle';
-import ScrollProgress from '../components/ScrollProgress';
-import Statement from '../components/Statement';
-import Grain from '../components/Grain';
-import Backdrop3D from '../components/Backdrop3D';
-import { Toaster } from '../components/ui/toaster';
 
 const Portfolio = () => {
+  const location = useLocation();
+  const lenis = useLenis();
+  const prefersReduced = useReducedMotion();
+  // The intro is a permanent scroll-linked section, not a one-shot: scrolling
+  // down scatters it, scrolling back up re-assembles it. Both it and its runway
+  // must render unconditionally — removing either mid-scroll would resize the
+  // document and yank the reader somewhere they did not ask to be.
+  const showIntro = !prefersReduced;
+
+  // Arriving from another route with a section in mind (nav click on /work/:id).
+  useEffect(() => {
+    const target = location.state?.scrollTo;
+    if (!target) return;
+    const el = document.getElementById(target);
+    if (!el) return;
+    const t = setTimeout(() => {
+      if (lenis) lenis.scrollTo(el, { duration: 1.2, offset: -72 });
+      else el.scrollIntoView({ behavior: 'smooth' });
+    }, 260);
+    return () => clearTimeout(t);
+  }, [location.state, lenis]);
+
   return (
-    // bg-surface lives here rather than on each section, so the fixed 3D
-    // backdrop can sit above the page colour but below all the content.
-    <div className="relative min-h-screen bg-surface">
-      <Backdrop3D />
-      <Grain />
-      <ScrollProgress />
-      <ThemeToggle />
-
-      <div className="relative z-10">
-        <Hero />
-        <Statement />
-        <Projects />
-        <Skills />
-        <Contact />
-      </div>
-      <Toaster />
-
-      <footer
-        className="relative z-10 py-12 border-t border-ink/5"
-        style={{ background: 'linear-gradient(180deg, transparent 0%, var(--surface) 100%)' }}
-      >
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-ink/80 font-mono text-sm md:text-base tracking-widest uppercase">
-            © {new Date().getFullYear()} Symond. All rights reserved.
-          </p>
-          <p className="text-ink/40 text-xs mt-4 font-mono">
-            Built with <span className="text-brand">React</span> and <span className="text-brand">Tailwind CSS</span>
-          </p>
-        </div>
-      </footer>
-    </div>
+    <>
+      {showIntro && <PortraitIntro />}
+      {/* Scroll runway the fixed intro consumes before the page takes over. */}
+      {showIntro && <div style={{ height: `${INTRO_VH * 100}vh` }} aria-hidden="true" />}
+      <Hero />
+      <Work />
+      <About />
+      <Skills />
+      <Contact />
+    </>
   );
 };
 
