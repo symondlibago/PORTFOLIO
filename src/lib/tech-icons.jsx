@@ -2,6 +2,7 @@ import React from 'react';
 import {
   SiReact, SiLaravel, SiTailwindcss, SiMysql, SiJavascript, SiNodedotjs,
   SiHtml5, SiCss3, SiPhp, SiMui, SiAmazons3, SiAstro, SiTypescript, SiGit,
+  SiVite, SiFramer,
 } from 'react-icons/si';
 import { Globe, Cpu } from 'lucide-react';
 
@@ -26,6 +27,8 @@ export const techIcons = {
   Astro: <SiAstro />,
   TypeScript: <SiTypescript />,
   Git: <SiGit />,
+  Vite: <SiVite />,
+  'Framer Motion': <SiFramer />,
   'REST APIs': <Globe />,
   'Responsive Design': <Cpu />,
 };

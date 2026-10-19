@@ -14,6 +14,52 @@ export const skills = [
 
 export const projects = [
   {
+    id: 'novamdk',
+    title: 'Nova MDK — Telehealth Platform',
+    description: 'An online care platform covering weight loss, longevity, skin health, sexual wellness and recovery. Someone arriving unsure of what they need starts on a short triage quiz rather than a catalogue, and only then moves into the full medical intake that a licensed provider reviews before anything is prescribed and shipped. Around that sit a treatment catalogue, a patient portal, a weight-loss calculator, a supplements store and an article library. Tracking is deliberately route-aware — the tag manager loads on public pages only, so landing straight on the intake form or the portal never fetches it, and the support chat is confined to the portal instead of floating over a medical questionnaire.',
+    image: '/novamdk/novamdk1.avif',
+    link: 'https://www.novamdk.com',
+    techStack: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],
+    gallery: [
+      '/novamdk/novamdk1.avif', '/novamdk/novamdk2.avif', '/novamdk/novamdk3.avif',
+      '/novamdk/novamdk4.avif', '/novamdk/novamdk5.avif', '/novamdk/novamdk6.avif',
+      '/novamdk/novamdk7.avif', '/novamdk/novamdk8.avif', '/novamdk/novamdk9.avif',
+      '/novamdk/novamdk10.avif', '/novamdk/novamdk11.avif', '/novamdk/novamdk12.avif',
+    ],
+    featured: false
+  },
+
+  {
+    id: 'motionrx',
+    title: 'MotionRx — Wellness Clinic',
+    description: 'A site for MotionRx, a Costa Mesa clinic offering IV nutrient therapy, NAD+, hormone optimization, medical weight management, peptide therapy and lab testing. Every service has its own page, and booking runs through a Boulevard overlay so nobody has to leave the site to reserve a slot. Underneath it is a small design system driven entirely by data attributes on the document — palette, font pairing, weight and section layout are all swappable, saved per visitor and live-updated over postMessage when the site is previewed inside an editing iframe. Memberships and pricing, patient stories, team bios and an FAQ make up the rest, with MedicalClinic structured data for local search.',
+    image: '/motionrx/motionrx1.avif',
+    link: 'https://motionrx.co',
+    techStack: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],
+    gallery: [
+      '/motionrx/motionrx1.avif', '/motionrx/motionrx2.avif', '/motionrx/motionrx3.avif',
+      '/motionrx/motionrx4.avif', '/motionrx/motionrx5.avif', '/motionrx/motionrx6.avif',
+      '/motionrx/motionrx7.avif', '/motionrx/motionrx8.avif', '/motionrx/motionrx9.avif',
+    ],
+    featured: false
+  },
+
+  {
+    id: 'dpcy',
+    title: 'DPCY Health Care — Clinic Management System',
+    description: 'A monitoring and management system for DPCY Health Care, a diagnostic and drug testing centre. The counter runs on a single receipt screen: register the patient, pick their services, and the receipt totals itself on the right while the patient type — regular, PWD, senior or Yakap member — applies the correct discount automatically, then saves with or without printing. Everything downstream feeds off that one entry. Discounted patients are added to a PWD/senior/Yakap registry that links each record back to the receipt it came from, sales roll up daily, weekly, monthly and yearly with an Excel export, and the dashboard tracks revenue against expenses, service availments over a chosen date range, and a daily attendance log for staff.',
+    image: '/dcpy/dcpy1.avif',
+    techStack: ['React', 'Tailwind CSS', 'Laravel', 'MySQL'],
+    gallery: [
+      '/dcpy/dcpy1.avif', '/dcpy/dcpy2.avif', '/dcpy/dcpy3.avif',
+      '/dcpy/dcpy4.avif', '/dcpy/dcpy5.avif', '/dcpy/dcpy6.avif',
+      '/dcpy/dcpy7.avif', '/dcpy/dcpy8.avif', '/dcpy/dcpy9.avif',
+      '/dcpy/dcpy10.avif',
+    ],
+    featured: false
+  },
+
+  {
     id: 'nourish',
     title: 'Nourish — Offline Social Club',
     description: 'A live site for Nourish, a Halifax social club that runs real-life events instead of another group chat. The main job was getting people from browsing to actually booking a spot, so the calendar does most of the heavy lifting — filter by date, category or the kind of night you are after, then reserve or set a reminder without leaving the page. There is also a long-form "The Why" page, an FAQ and contact form, and a dashboard for members and guests. Light and dark themes throughout, and page changes that fade instead of jolting you around.',
